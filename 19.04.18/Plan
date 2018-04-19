@@ -1,0 +1,27 @@
+Math
+
+Arr - колекція елементів [] start 0
+create - [] or new Array();
+довжина масива
+доступ до елемента масива
+Багатомірний масив
+Вложеність
+push
+pop
+shift
+unshift
+indexOf
+includes
+splice
+slice
+reverse
+concat
+
+loops
+
+while
+do while
+for
+break
+continue
+for of

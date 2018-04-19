@@ -1,0 +1,49 @@
+Екранування
+
+
+Оператори порівняння
+>
+<
+>=
+<=
+==
+===
+!=
+!==
+
+
+
+
+Перетворення типів на true false
+Boolean();
+
+|| зупиняється на першому true інaкше false
+&& зупиняється на першому false інaкше true
+!
+
+Пріоритет виконання https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Operators/Operator_Precedence
+
+Control Structures
+
+if
+1) Умова - завжди boolean
+2) Тіло виразу
+else
+else if
+
+switch
+
+trenary operator
+
+Math
+
+Math.random	Псевдослучайное число в диапазоне [0, 1), т.е. включая 0, но исключая 1.
+Math.max(a, b, c)	Возвращает наибольшее из чисел, перечисленных через запятую в круглых скобках (наибольший аргумент)
+Math.min(a, b, c)	Возвращает наименьшее из чисел, перечисленных через запятую в круглых скобках (наименьший аргумент)
+Math.ceil(0.5)	Округление вверх: 1
+Math.floor(0.5)	Округление вниз: 0. Используется для точного распредления Math.random()
+Math.round(0.5)	Округление до ближайшего целого: 1
+Math.(base, exponent)	возведение числа base в степень exponent
+Math.PI	число π: 3.14...
+Math.pow,
+Math.sqrt.
