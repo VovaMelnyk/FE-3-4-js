@@ -1,14 +1,14 @@
-let account = {
-    cash: 12000,
-    spend: function (amount) {
-        this.cash -= amount;
-        console.log(`New balance is ${this.cash}`);
-    },
-    deposit: function (amount) {
-        this.cash += amount;
-        console.log(`New balance is ${this.cash}`);
-    }
-};
+// let account = {
+//     cash: 12000,
+//     spend: function (amount) {
+//         this.cash -= amount;
+//         console.log(`New balance is ${this.cash}`);
+//     },
+//     deposit: function (amount) {
+//         this.cash += amount;
+//         console.log(`New balance is ${this.cash}`);
+//     }
+// };
 
 // console.log(account);
 // acount.spend(1000);
