@@ -103,17 +103,17 @@
 // max.showName();
 // anna.showName();
 
-function Human(name) {
-    this.name = name;
-}
-//
-console.log(Human.prototype.__proto__ === Object.prototype);
+// function Human(name) {
+//     this.name = name;
+// }
+// //
+// console.log(Human.prototype);
 // Human.prototype.hello = function () {
 //     console.log(`Hello my friends is ${this.friends}`);
 // };
 // Human.prototype.friends = ['Jony', 'Jamshud', 'Ravsah'];
 // // //
-let man = new Human('Max');
+// let man = new Human('Max');
 // let anna = new Human('Anna');
 // let mick = new Human('Mick');
 // // mick.friends.pop();
@@ -175,7 +175,7 @@ let man = new Human('Max');
 
 // Apples
 // Class and // extends
-// protorype
+// protorype === __proto__
 // function Human(name, age) {
 //     this.name = name;
 //     this.age = age;
@@ -184,11 +184,11 @@ let man = new Human('Max');
 // Human.prototype.eat = function () {
 //     console.log(`I can eat`);
 // };
-//
+// //
 // Human.prototype.walk = function () {
 //     console.log(`I can walk`);
 // };
-//
+// //
 // Human.prototype.sleep = function () {
 //     console.log(`I can sleep`);
 // };
@@ -215,94 +215,46 @@ let man = new Human('Max');
 // let man = new Human('Max',12);
 // console.log(man);
 // man.walk();
-
-
-// Animal.eat();
-// Animal.sleep();
-// let dog = new Animal();
-// dog.sleep();
-// Animal.indentificator();
-// dog.indentificator();
-// Animal.indentificator()
-// const bobby = new Animal('Bobby', 5);
-// console.log(bobby);
-// bobby.eat();
-// bobby.sleep();
-// bobby.wakeUp();
-// bobby.logAge();
-// //
+// inh
 // class Animal {
-// constructor - аналог ф-ї конструктора що має бути присутнім в класі обовязково (створює власні властивоств екзмпляра)
-// constructor(name, age) {
-//     console.log(`${name} is animal and was created`);
-//     this.name = name;
-//     this.age = age;
-// }
+//     constructor(name, age) {
+//         this.name = name;
+//         this.age = age;
+//     }
 //
-// static indentificator () {
-//     console.log(`Hello i am animal`);
-// }
-//
-// eat() {
-//     console.log(`${this.name} is eating`);
-// }
-//
-// sleep() {
-//     console.log(`${this.name} is sleeping`);
-// }
-//
-// wakeUp() {
-//     console.log(`${this.name} is waking up`);
-// }
-//
-// logAge () {
-//     return `${this.name} is ${this.age} years old`;
-//
-// }
+//     move() {
+//         console.log(`I, ${this.name}, am moving!`);
+//     }
 // }
 
-
+// let dog = new Animal('bobik');
+// dog.move();
+//
 // class Dog extends Animal {
-//     constructor(name, age,breed) {
+//     constructor(name, age, breed) {
+//         // вызвать конструктор Animal с аргументом name
 //         super(name, age);
 //         this.breed = breed;
 //     }
-//     logAgeFromDog() {
-//     return `${super.logAge()} i am from dog`;
-// }
-
-// eat() {
-//     console.log(`I am changed eat method`);
-// }
-
-// }
-
-// let dog = new Dog('Chapy', 5, 'buldog');
-// console.log(dog);
-// dog.eat();
-// Dog.indentificator();
-// console.log(dog.logAgeFromDog());
-
-// class Dog extends Animal{
-//     constructor(name, age, breed) {
-//         super(name, age)
-//         this.breed = breed;
+//
+//     bark() {
+//         console.log('woof!');
 //     }
 //
-//     logBreed() {
-//         console.log(`${this.name} is a ${this.breed}`);
-//     }
-//
-//     logAgeFromDog() {
-//         super.logAge();
+//     moveAndMakeSound() {
+//         super.move();
+//         this.bark();
 //     }
 // }
+// //
+// const dog = new Dog('Mango',25, 'buldog');
+// console.log(dog.moveAndMakeSound());
+// dog.move();
+// dog.bark();
+// dog.moveAndMakeSound();
+// console.log(dog.name);
 
-//
-// const lassie  = new Dog('Lassie', 3, 'Collie');
-// lassie.logBreed();
-// lassie.logAgeFromDog();
-
+// //
 
 // class Client {
 //     constructor(name, days, room) {
@@ -335,54 +287,210 @@ let man = new Human('Max');
 //         console.log(`Client ${this.name} Will stay for ${this.days} days in room number ${this.room}`);
 //     }
 // }
-//
-// const ajax = new Client('Ajax',10,100);
 // //
-// ajax.getInfo();
-// console.log(ajax);
-// console.log(ajax.name);
+// const ajax = new Client('Ajax',10,100);
+// // //
+// // ajax.getInfo();
+// // console.log(ajax);
+// // console.log(ajax.name);
 // console.log(ajax.days);
-// console.log(ajax.start);
+// console.log(ajax.START);
+// // console.log(ajax.start);
+
+
+// static methods
+// class Animal {
+// // constructor - аналог ф-ї конструктора що має бути присутнім в класі обовязково (створює власні властивоств екзмпляра)
+//     constructor(name, age) {
+//         console.log(`${name} is animal and was created`);
+//         this.name = name;
+//         this.age = age;
+//     }
+//
+//     static indentificator() {
+//         console.log(`Hello i am static method`);
+//     }
+//
+//     eat() {
+//         console.log(`${this.name} is eating`);
+//     }
+//
+//     sleep() {
+//         console.log(`${this.name} is sleeping`);
+//     }
+//
+//     wakeUp() {
+//         console.log(`${this.name} is waking up`);
+//     }
+//
+//     logAge() {
+//         return `${this.name} is ${this.age} years old`;
+//
+//     }
+// }
+
+
+// class Dog extends Animal {
+//     constructor(name, age,breed) {
+//         super(name, age);
+//         this.breed = breed;
+//     }
+//     logAgeFromDog() {
+//     return `${super.logAge()} i am from dog`;
+// }
+
+// eat() {
+//     console.log(`I am changed eat method`);
+// }
+
+// }
+// Animal.eat();
+// Animal.sleep();
+// let dog = new Animal();
+// dog.sleep();
+// Animal.indentificator();
+// dog.indentificator();
+// Animal.indentificator();
+// const bobby = new Animal('Bobby', 5);
+// bobby.indentificator();
+// console.log(bobby);
+// // bobby.eat();
+// // bobby.sleep();
+// // bobby.wakeUp();
+// console.log(bobby.logAge());
+// let dog = new Dog('Chapy', 5, 'buldog');
+// console.log(dog);
+// dog.eat();
+// Dog.indentificator();
+// console.log(dog.logAgeFromDog());
+
+// class Tank {
+//     constructor(x, y, ammunition) {
+//         this.x = x;
+//         this.y = y;
+//         this.ammunition = ammunition;
+//     }
+//
+//     moveTo(x, y) {
+//         this.x = x;
+//         this.y = y;
+//     }
+//
+//     fireTo(x, y) {
+//         if (this._canFire()) {
+//             console.log('Fire');
+//             this.ammunition--;
+//         } else {
+//             alert('Поповніть рахунок, відправте СМС на номер 339985');
+//         }
+//
+//     }
+//
+//     _canFire() {
+//         if(this.ammunition > 0) {
+//            return true
+//         } else {
+//             return false
+//         }
+//     }
+// }
+//
+// let tank1 = new Tank(10,20,3);
+// console.log(tank1.ammunition);
+// tank1.fireTo(30,30);
+// console.log(tank1.ammunition);
+// tank1.fireTo(40,40);
+// console.log(tank1.ammunition);
+// tank1.fireTo(10,10);
+// console.log(tank1.ammunition);
+// tank1.moveTo(50,50);
+// // console.log(tank1.x, tank1.y);
+// tank1.fireTo(60,60);
+// // console.log(tank1.ammunition);
+// // console.log(tank1.canFire());
+
+
+// 1) Створити клас Танк
+// 2) Клас буде мати методи які будуть приймати координати по осі х та у:
+// 2.1) moveTo, fireTo
+// 3) додати класу властивість ammunition
+// 4) При пострілу зменьшувати кількість снарядів
+// 5) Створити метод що дасть можливість відразу іхати і стріляти moveAndFire прийматиме moveX, moveY, fireX, fireY
+// 6) Створити метод перевірки кількості снарядів canFire()
+// 7) Приватний метод _canFire
 
 // get i set
 
 
-// static methods
+class User {
+    constructor(name, surname) {
+        // this.name = name;
+        // this.surname = surname;
+        // private
+        this._name = name;
+        this._surname = surname;
+    }
+
+    getFullName() {
+        return `${this._name} ${this._surname}.`
+    }
+
+    // // getter
+    //
+    get getterName() {
+        return this._name;
+    }
+    //
+    // get surname() {
+    //     return this._surname;
+    // }
+    // // setter
+    //
+    set age(age) {
+        this._age = age;
+    }
+
+    set setName (name) {
+        this._name = name;
+    }
+
+    //
+    get age() {
+        return this._age;
+    }
+}
+
+let user = new User('Jon', 'Dou');
+// console.log(user.getFullName());
+//
+// console.log(user.getFullName());
+// console.log(user.name);
+// // get and set
+// console.log(user.name);
+// user.name = 'Mick';
+// console.log(user.name);
+// // console.log(user.surname);
+// // user.name = 'mick';
+console.log(user.getterName);
+user.setName = 'newName';
+console.log(user.getterName);
+
+// user.age = 25;
+// console.log(user.age);
 
 
-// class Animal {
-//     constructor(name) {
-//         this.name = name;
-//     }
-//
-//     move() {
-//         console.log(`I, ${this.name}, am moving!`);
-//     }
-// }
-//
-// class Dog extends Animal {
-//     constructor(name, breed) {
-//         // вызвать конструктор Animal с аргументом name
-//         super(name);
-//         this.breed = breed;
-//     }
-//
-//     bark() {
-//         console.log('woof!');
-//     }
-//
-//     moveAndMakeSound() {
-//         super.move();
-//         this.bark();
-//     }
-// }
-//
-// const dog = new Dog('Mango', 'shepherd');
+// 1)Створити клас Worker що буде мати властивості name, surname, rate, days
+// 2) Додати метод getSalary(),
+// 3) Створити 2 робітника і знайти їх зарплати
+// 4) Модифікувати клас так щою всі 4 властивості з пункта №1 були приватними і написати для їх читання гетери
+// 5) Для властивостей rate, days додати методи сетери
 
-// dog.move();
-// dog.bark();
-// dog.moveAndMakeSound();
-// console.log(dog.name);
+// 1) Створити клас User шо буде мати поля name, surname
+// 2) Додати метод getFullName() що виводить на екран імя і прізвище
+// 3) Створити клас Student шо буде наслідуватися від User
+// 4) Властивості  name, surname буде наслідувати від User і буде мати власну властивість yearIn
+// 5) Для студента додати метод getCourse() що показує курс на якому навчається зараз студент (від поточного року відняти рік вступу)
+// 6) Додати студенту метод getFullInfo() який бере інформацію з батьківського метода getFullName() і свого getCourse() і виводить її на екран
 
 
 /*
