@@ -1,0 +1,17 @@
+Async and sync code
+setTimeout
+setInterval и
+clearInterval
+Затримка в 4 мс
+Обєкт Date
+new Date();
+new Date(year, month, day, hours, minutes, seconds, milliseconds);
+getDate()
+getDay()
+getFullYear()
+getHours()
+getMilliseconds()
+getMinutes()
+getMonth()
+getSeconds()
+now()
