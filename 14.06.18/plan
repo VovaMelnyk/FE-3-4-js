@@ -1,0 +1,12 @@
+addEventListener и removeEventListener
+event.type
+event.currentTarget
+event.target
+event.stopPropagation().
+stopImmediatePropagation()
+Делегирование
+ event.preventDefault().
+
+DOMContentLoaded
+onload
+onbeforeunload
